@@ -34,13 +34,12 @@
   });
 
   /* display basemap tiles -- see others at https://leaflet-extras.github.io/leaflet-providers/preview/ */
-  L.tileLayer(
-    'https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.{ext}', {
-      attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, 
-      <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; 
-      Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> 
-      contributors'
-  }).addTo(map);
+ L.tileLayer(
+   'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+     attribution: '&copy; <a href="https://osm.org/copyright">\
+      OpenStreetMap</a> contributors, &copy;\
+        <a href="https://carto.com/attribution">CARTO</a>'
+ }).addTo(map);
 
   /* Display a point marker with pop-up text */
   L.marker([30.265710101230777, -97.74354413257288]).addTo(map) // EDIT marker coordinates
